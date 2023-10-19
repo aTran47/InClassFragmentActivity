@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         supportFragmentManager.beginTransaction()
             .add(R.id.fragmentContainerView,fragment1)
+            //.add(R.id.fragmentContainerView,ImageDisplayFragment.newInstance(imageArray))
             .commit()
 
     }
