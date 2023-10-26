@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         val imagesViewModel = ViewModelProvider(this)[ImagesViewModel::class.java]
 
+        imagesViewModel.setImages(imageArray)
 
         // Attach an instance of ImageDisplayFragment using factory method
         val fragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as ImageDisplayFragment
