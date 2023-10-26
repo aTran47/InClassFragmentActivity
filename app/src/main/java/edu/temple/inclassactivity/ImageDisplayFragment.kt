@@ -49,7 +49,10 @@ class ImageDisplayFragment : Fragment() {
 
     fun setImage (temp : IntArray) {
         images = temp
-        (view as RecyclerView).adapter = CustomRecyclerAdapter(images)
+
+        view?.run {
+            (view as RecyclerView).adapter = CustomRecyclerAdapter(images)
+        }
     }
 
     companion object {
