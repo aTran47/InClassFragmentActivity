@@ -3,6 +3,7 @@ package edu.temple.inclassactivity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.lifecycle.ViewModelProvider
 
 class MainActivity : AppCompatActivity() {
     
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         val imageArray = IntArray(typedArray.length()) {typedArray.getResourceId(it, 0)}
         typedArray.recycle()
 
+        val imagesViewModel = ViewModelProvider(this)[ImagesViewModel::class.java]
 
 
         // Attach an instance of ImageDisplayFragment using factory method
